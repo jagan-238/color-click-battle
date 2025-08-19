@@ -12,7 +12,7 @@ function Signup() {
   const handleSignup = async () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/game"); // Go to game page after signup
+      navigate("/game"); 
     } catch (err) {
       alert(err.message);
     }
@@ -21,7 +21,7 @@ function Signup() {
   return (
     <div className="signup-page">
       <div className="signup-box">
-        <h1>🎨 Color Clash</h1>
+        <h1> Color Clash</h1>
         <p>Match and arrange colors quickly to score points!</p>
 
         <div className="auth-container">
@@ -54,3 +54,4 @@ function Signup() {
 }
 
 export default Signup;
+
