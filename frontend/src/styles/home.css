@@ -27,9 +27,9 @@
 /* Game Section */
 .targets-grid {
   display: grid;
-  grid-template-columns: repeat(5, 80px); /* Fixed 5 columns */
+  grid-template-columns: repeat(5, 80px);
   gap: 20px;
-  justify-content: center; /* Centers the entire grid horizontally */
+  justify-content: center; 
   margin: 20px auto;
 }
 
@@ -136,3 +136,4 @@
   .color-block { width: 50px; height: 50px; }
   .rules-section h2, .about-section h2 { font-size: 1.4rem; }
 }
+
