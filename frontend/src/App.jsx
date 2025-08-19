@@ -1,6 +1,5 @@
 import React from "react";
-import { HashRouter as Router } from "react-router-dom";
-
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
@@ -28,3 +27,4 @@ function App() {
 }
 
 export default App;
+
