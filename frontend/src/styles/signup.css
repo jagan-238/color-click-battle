@@ -1,20 +1,21 @@
-/* Full screen signup page */
 .signup-page {
   display: flex;
   align-items: center;      /* Vertical center */
   justify-content: center;  /* Horizontal center */
-  height: 100vh;            /* Full viewport height */
+  min-height: 100vh;        /* Full viewport height */
   width: 100vw;             /* Full viewport width */
-  background: #fffdfd;      
+  background: #fffdfd;
   font-family: Arial, sans-serif;
   margin: 0;
+  padding: 10px;            /* Small padding for very small screens */
+  box-sizing: border-box;
 }
 
 /* Main form container */
 .auth-container {
   background: rgba(255,255,255,0.95);
   width: 420px;
-  max-width: 90%;
+  max-width: 95%;           /* Responsive max width */
   padding: 40px 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -22,29 +23,26 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: all 0.3s ease; /* Smooth resizing */
 }
 
 /* Title & description */
 .auth-container h1 {
   font-size: 2.5rem;
-  color: orange;   /* 🔥 Changed to orange */
+  color: orange;
   margin-bottom: 15px;
-  text-align: center; /* Ensures it's centered */
 }
 
 .auth-container p.subtitle {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 25px;
-  text-align: center;
 }
 
-/* Subheading */
 .auth-container h2 {
-  color: orange;   /* 🔥 Changed to orange */
+  color: orange;
   font-size: 1.5rem;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 /* Input fields */
@@ -55,6 +53,7 @@
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 /* Buttons */
@@ -66,7 +65,7 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background-color: orange;   /* 🔥 Changed button to orange */
+  background-color: orange;
   color: white;
   font-weight: bold;
   transition: transform 0.2s, background-color 0.2s;
@@ -74,18 +73,17 @@
 
 .auth-container .btn:hover {
   transform: scale(1.05);
-  background-color: darkorange;  /* 🔥 Hover color */
+  background-color: darkorange;
 }
 
 /* Links */
 .auth-container p {
   margin-top: 15px;
   font-size: 0.95rem;
-  text-align: center;
 }
 
 .auth-container a {
-  color: orange;   /* 🔥 Links orange */
+  color: orange;
   text-decoration: none;
   font-weight: bold;
 }
@@ -94,13 +92,60 @@
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .auth-container { padding: 30px 20px; }
-  .auth-container h1 { font-size: 2rem; }
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+  .auth-container {
+    width: 350px;
+    padding: 35px 25px;
+  }
+  .auth-container h1 {
+    font-size: 2.2rem;
+  }
+  .auth-container h2 {
+    font-size: 1.4rem;
+  }
+  .auth-container input,
+  .auth-container .btn {
+    font-size: 1rem;
+    padding: 10px;
+  }
 }
 
-@media (max-width: 480px) {
-  .auth-container { padding: 20px 15px; }
-  .auth-container h1 { font-size: 1.8rem; }
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .auth-container {
+    width: 300px;
+    padding: 30px 20px;
+  }
+  .auth-container h1 {
+    font-size: 2rem;
+  }
+  .auth-container h2 {
+    font-size: 1.3rem;
+  }
+  .auth-container input,
+  .auth-container .btn {
+    font-size: 0.95rem;
+    padding: 9px;
+  }
 }
+
+/* Responsive for very small screens */
+@media (max-width: 480px) {
+  .auth-container {
+    width: 90%;
+    padding: 25px 15px;
+  }
+  .auth-container h1 {
+    font-size: 1.8rem;
+  }
+  .auth-container h2 {
+    font-size: 1.2rem;
+  }
+  .auth-container input,
+  .auth-container .btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
