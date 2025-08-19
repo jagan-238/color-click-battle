@@ -1,16 +1,16 @@
 import React from "react";
 import "../styles/home.css";
-import Navbar from "../components/Navbar"; // Import Navbar
+import Navbar from "../components/Navbar"; 
 
 function Home() {
   return (
     <div className="home-container">
-      {/* Navbar always visible */}
+      {/* Navbar*/}
       <Navbar />
 
       {/* Hero Section */}
       <div className="hero">
-        <h1>🎨 Color Clash</h1>
+        <h1> Color Clash</h1>
         <p>Match and arrange the colors as quickly as you can to score points and beat the computer!</p>
       </div>
 
@@ -75,3 +75,4 @@ function Home() {
 }
 
 export default Home;
+
